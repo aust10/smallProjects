@@ -7,12 +7,16 @@ user_input = input('Enter 16 numbers between 1-9: ')
 #change the users input str into a list using the list function of user_input
 #also use the map function to allow you to put multiple functions within a single function. in this case it allowed me to use list and int, without map it gave me a error for int
 user_input = list(map(int,user_input))
+# this is the starting numbers that were inputed
 print (user_input)
 # use the .pop() function to take off the last number and store it for later 
 last_num = user_input.pop()
+print(last_num, "the number that is .pop()")
+# starting number again 
 print(user_input)
 # use the reverse() function to reverse the list user_input
 user_input.reverse()
+# this puts  the numbers in reverse
 print (user_input)
 
 for i in range (0, len(user_input), 2):
@@ -22,7 +26,7 @@ for i in range (0, len(user_input), 2):
 #create a new variable and set it equal to the sum(of the old variable), then print the new one
 print(user_input)
 new = sum(user_input)
-print (new)
+print ("new sum is",new)
 
 new1 = list(str(new))
 print (new1)
