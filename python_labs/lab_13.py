@@ -5,10 +5,9 @@ from string import ascii_lowercase
 
 #def rot_loop ():
 
-user_input = "hello"
-# input('What prase would you like to encode? :  ')
-# user_input = list(user_input)
-# print (user_input)
+user_input = input("What word would you like to encript? ")
+move_distance = int(input("How many places do you want to move? "))
+
 # for i in range(len(user_input)):
 # print(ascii_lowercase.index (user_input)
 # # x = ''
@@ -17,8 +16,8 @@ user_input = "hello"
 new = []
 for letter in user_input:
     new.append (ascii_lowercase.index(letter))
-# print (user_input)
-new_list = [x+13 for x in new]
+print (f'You entered {user_input}')
+new_list = [x+move_distance for x in new]
 
 final_list = [x % 26 for x in new_list]
 
@@ -26,11 +25,16 @@ letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','
 
 final_num= []
 for number in final_list:
-    final_num.append(ascii_lowercase.index)
-print (new)
-print (new_list)
+   final_num.append(ascii_lowercase[number])
+#    final_num.append(chr((number)))
+
+# print (new)
+# print (new_list)
+# print (final_list)
 print(final_num)
-print (final_list)
+answer = ''.join(final_num)
+
+print("Your encripted name is: ", answer)
 
 # print (letters.index(final_list)) 
 #ask about this 
