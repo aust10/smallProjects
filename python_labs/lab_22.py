@@ -9,7 +9,7 @@ punctuation = '''!@#$%^&*?.,<>'''
 no_punct = ''
  #this counts sentences 
 sentences = float(text2.count('.'))
-    #print (sentences)
+print (sentences)
  #replaces punctuation with a space 
 for char in text2:
     if char not in punctuation:
@@ -22,7 +22,7 @@ for space in no_punct:
         #print (no_punct)
 #gets the numer of characters 
 characters = float(len(no_punct))
-    #print (characters)
+print (characters)
 
 words = text2.split(' ')
    # print(words)
@@ -60,3 +60,4 @@ ages = (ari_scale[ari_rounded]['ages'])
 grade = (ari_scale[ari_rounded]['grade_level'])
 print (f'The Ari for this text is {ari_rounded}')
 print (f'This is equivilent to a grade level of {grade} \nthat is normal for a person {ages} years old!')
+

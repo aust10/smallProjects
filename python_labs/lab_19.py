@@ -23,6 +23,21 @@ def game():
     nums = {'2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10, 'j': 10, 'q':10, 'k':10 ,'a':1}
 
 # adding all the values that the user inputed to get the total number 
+    test = (user_input1,user_input2,user_input3)
+    testing = [test[i] for i in range(len(test)) if i == test.index(test[i])]
+    print(testing)
+    # for x in test:
+    #     if x == ('a','a'):
+    #         print("bust")
+    #     else:
+    #         pass
+    # if test == ('a','a', nums):
+    #     print("bust")
+   
+    # else:
+    #     pass
+    print(x)
+
     actual = (nums[user_input1] + nums[user_input2] + nums[user_input3])
 
     print (actual)

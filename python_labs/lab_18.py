@@ -81,8 +81,8 @@ def print_range(data):
     return water_counter
 
 def is_water(data, x, y):
-    ''' parameters: data and location (index) along range, and height we're evaluating
-        return: returns true if water, false if not water'''
+    #  parameters: data and location (index) along range, and height we're evaluating
+    #     return: returns true if water, false if not water
 
     # recursively check to left and right, if there is land return true, else return false
     is_land_to_left = check_left(data,x,y)

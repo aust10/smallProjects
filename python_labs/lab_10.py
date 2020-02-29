@@ -3,12 +3,16 @@ nums = []
 total = 0
 
 while True:
+    # take in user input
     user_input = input('enter a number, or enter *done*: ')
+    # append user input to nums
     nums.append(user_input) #after talking we discussed this could go by break
+    # if statemt to get user input 'done'
     if user_input == 'done':
         nums.pop() #un needed in if you put the .append() by the break
         print (nums)
         break
+    # if user input is not done then do the for loop below to get numbers add numbers and divide by total
 for num in nums:
     total += int(num)
 print('sum is', total)
@@ -23,13 +27,3 @@ print('the average is', average)
 
 # another example of line 17 is print(f'average: {average}')
     
-
-
-
-
-
-
-    
-
-    
-

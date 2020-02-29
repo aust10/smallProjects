@@ -4,7 +4,7 @@ print('*Welcome to the number to number name converter 1000*')
 #define the what you want to call your game or program
 def number_name():
     # dictionary, write nums to represent each side (int: str) in this case it is the number and then its spelling *notice 20-90 are only written in tens that is becasue below it is converted into full numbers : these are variables
-    nums = {1:"One", 2:"Two", 3:"Three" ,4:"Four", 5:"Five", 6:"Six", 7:"Seven", 8:"Eight",      9:"Nine", 0:"Zero", 10:"Ten", 11:"Eleven", 12:"Tweleve" , 13:"Thirteen",                    14:"Fourteen", 15: "Fifteen", 16:"Sixteen", 17:"Seventeen", 18:"Eighteen",                  19:"Nineteen", 20:"Twenty", 30:"Thirty", 40:"Forty", 50:"Fifty", 60:"Sixty",                70:"Seventy", 80:"Eighty", 90:"Ninety"}
+    nums = {1:"One", 2:"Two", 3:"Three" ,4:"Four", 5:"Five", 6:"Six", 7:"Seven", 8:"Eight", 9:"Nine", 0:"Zero", 10:"Ten", 11:"Eleven", 12:"Tweleve" , 13:"Thirteen", 14:"Fourteen", 15: "Fifteen", 16:"Sixteen", 17:"Seventeen", 18:"Eighteen", 19:"Nineteen", 20:"Twenty", 30:"Thirty", 40:"Forty", 50:"Fifty", 60:"Sixty", 70:"Seventy", 80:"Eighty", 90:"Ninety",1000:"One Thousand"}
 # below your variables you need to ask the user what you want them to do in this case we want them to add a number 
     num = int(input("Enter a number from 1-1000: "))
 # To convert three digit number into words
@@ -36,5 +36,16 @@ def number_name():
         else:
             a *= int(10)
             print (nums[a], nums[b])
+
+    if num == 1000:
+        print(nums[num])
 # use the below statement to call the function
 number_name()
+
+while True:
+    user_input = input("Would you like to convert another nuber? yes or no: ")
+    if user_input == "yes":
+        number_name()
+    else:
+        print("Have a lovely day!")
+        break
