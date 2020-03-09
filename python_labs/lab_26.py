@@ -14,8 +14,9 @@ class Board(object):
     #init to initialise list of cells with length 9
     def __init__(self):
         self.cells = [" "]*9
-      #  print(self.cells)
-    #displays board in a presentable order
+        # print('this is self.cells',self.cells)
+#makes the board cells
+#displays board in a presentable order
     def display(self):
         #print(self.cells)
         print(self.cells[0] + '|' + self.cells[1] + '|' + self.cells[2])
@@ -24,19 +25,19 @@ class Board(object):
         print('------')
         print(self.cells[6] + '|' + self.cells[7] + '|' + self.cells[8])
 
-    #updates board
+#updates board for player 1
     def update(self, cell_num,player):
         if self.cells[cell_num-1] == " ":
             self.cells[cell_num-1] = player
         return player
-    
+#updates board for player2
     def update2(self,cell_num,player):
         if self.cells[cell_num-1] == " ":
             self.cells[cell_num-1] = player
         return player
            
             
-    #checks all conditions for winner
+#checks all conditions for winner
     def iswinner(self, player):
 
         #horizontal check
@@ -61,11 +62,11 @@ class Board(object):
         if (self.cells[2]==player and self.cells[4]==player and self.cells[6]==player):
             return True
 
-    #resets board to starting board
+#resets board to starting board
     def reset(self):
         self.cells = [" "]*9
 
-    #checks for tie aka board full
+#checks for tie aka board full
     def check(self):
         used = 0
         for cell in self.cells:
@@ -80,12 +81,21 @@ class Board(object):
 def Welcome():
     print("Welcome to tic tac toe\n")
     board.display()
-        #player.__init__()
+       
+def check_if_tie():
+    if(board.check()):
+        print('\n Tie!')
+        replay = input('Do you want to play again ? (Y/N):  ').upper()
+        if(replay == "Y"):
+            board.reset()
 
+#this is where the game begins 
 board = Board()
 #player = Player()
+#this runs the welcome to tic tac toe game print and then gives the display method
 Welcome()
 
+#this takes in player one and then player two and gives them a value of x or o
 p1 = Player(input('Player 1 what is your name?'), 'x')
 p2 = Player(input('Player 2 what is your name?'), 'o')
 token1 = ('x')
@@ -95,12 +105,12 @@ token2 = ('o')
 
 while True:
     
-    #get X input 
-    x = int(input(f"\n Please choose from 1-9\n{p1}\n "))
+#get X input 
+    x = int(input(f"\nPlease choose from 1-9\n{p1}\n "))
     board.update(x,token1)
     board.display()
 
-    #check if X is winner
+#check if X is winner
     if(board.iswinner(token1)):
         print(f'\n {p1} wins !')
         replay = input('Do you want to play again ? (Y/N):  ').upper()
@@ -109,34 +119,27 @@ while True:
         else:
             break
 
-    #check if it is a tie
-    if(board.check()):
-        print('\n Tie!')
-        replay = input('Do you want to play again ? (Y/N):  ').upper()
-        if(replay == "Y"):
-            board.reset()
-        else:
-            break
+#check if it is a tie
+    check_if_tie()
+
         
-    #get o input
-    o = int(input(f"\n Please choose from 1-9\n {p2}\n "))
+#get o input
+    o = int(input(f"\nPlease choose from 1-9\n {p2}\n "))
     board.update2(o, token2)
     board.display()
 
-    #check if o is winner
+#check if o is winner
     if(board.iswinner(token2)):
-        print(f'\n {p1} wins !')
+        print(f'\n {p2} wins !')
         replay = input('Do you want to play again ? (Y/N):  ').upper()
         if(replay == "Y"):
             board.reset()
         else:
             break
         
-    #check if it is a tie
-    if(board.check()):
-        print('\n Tie !')
-        replay = input('Do you want to play again ? (Y/N):  ').upper()
-        if(replay == "Y"):
-            board.reset()
-        else:
-            break
+#check if it is a tie
+    check_if_tie()
+
+
+if move == 7:
+    move = 1,2

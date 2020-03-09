@@ -71,4 +71,3 @@ with open('lab21text.txt', 'r') as file:
 
 
 
-

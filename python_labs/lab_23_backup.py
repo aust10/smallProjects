@@ -9,7 +9,7 @@ for i in range(1,3):
     key_things = lines[0]
     key_things = key_things.split(',')
     #print(key_things)
-    row = lines[i]
+    row = lines[0]
     row = row.split(',')
     row = dict(zip(key_things,row))
     things.append(row)

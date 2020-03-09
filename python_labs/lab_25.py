@@ -19,29 +19,30 @@ class Account:
             
     def deposit(self, deposit):
         self.balance += deposit
-        self.__transactions.append(f'user deposited {deposit} dollars')
+        self.__transactions.append(f'{user} deposited {deposit} dollars')
         
     def withdraw(self, withdraw):
         if self.check_withdrawal(withdraw) == True:
             self.balance -= withdraw
-            self.__transactions.append(f'user withdrew {withdraw} dollars')
+            self.__transactions.append(f'{user} withdrew {withdraw} dollars')
         elif self.check_withdrawal(withdraw) == False:
-            print ('you cant pull that much crazy')
+            print ('You cant pull that much crazy')
             print ('You have incificient funds')
-            self.__transactions.append(f'user Tried to withdrew {withdraw} dollars w/incificent funds')
+            self.__transactions.append(f'{user} Tried to withdrew {withdraw} dollars w/incificent funds')
 
     def history(self):
         for log in self.__transactions:
             print(log)
 
 balance = Account(0)
+user = input("Hey there what is your name? ")
 
 while True:
-    user_input = input('\nwhat would you like to do?\nmake a deposit enter: d\nmake a withdrawal enter: w\ncheck your balance enter: c\ncheck your history enter: h\nto exit type: peace\n')
+    user_input = input(f'\nHey {user}\nWhat would you like to do?\nMake a deposit enter: d\nMake a withdrawal enter: w\nCheck your balance enter: c\nCheck your history enter: h\nTo exit type:done\n')
     if user_input == 'd':
-        balance.deposit(int(input('How much do you want to deposit ? ')))
+        balance.deposit(float(input('How much do you want to deposit ? ')))
     elif user_input == 'w':
-        balance.withdraw(int(input('How much do you want to withdraw? ')))
+        balance.withdraw(float(input('How much do you want to withdraw? ')))
     elif user_input == 'c':
         balance.check_balance(balance)
     elif user_input == 'h':
@@ -69,5 +70,3 @@ while True:
     # def check_ballance(self, b):
     #     cx = self.x == b.x
     #     cy = self.y + b.y
-        
-    

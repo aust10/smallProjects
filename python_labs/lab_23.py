@@ -70,19 +70,6 @@ def update():
                 
                 export_list()
             # return n  
-            
-# def update_contact():
-#     print("Update a contact, Name-Game-Pet")
-#     up = input("Who do you want to update? ")
-#     change = input("What do you want to update?: ")
-#     new_name = input("What is the new Name? ")
-#     for duck in con2:
-#         if duck['name'] == up:
-#             if change in duck:
-#                 duck[change] == new_name
-#                 print(duck[change]) #this should be print duck not duck change
-#                 print(new_name)
-
 
 
 def delete():
@@ -113,3 +100,15 @@ while True:
         
 #with open('test_contacts.csv', 'a') as file:
    # file.write()
+
+
+#    contact = []
+
+#    user_input = input("name: ")
+#    what = input('what should we update')
+#    with_what = inupt('what do you want to put here now')
+
+#    for x in contact:
+#        if x['name'] == user_input:
+#            x[what] = with_what
+

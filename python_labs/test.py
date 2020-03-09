@@ -210,27 +210,6 @@ print_stuff(data)
 # new = hello.count('.')
 # print(new)
 
-    
-hello = 'this is just a long string'
-
-new_hello = hello.replace(' ','')
-
-print(new_hello)
-new_new = len(new_hello)
-print(new_new)
-
-
-counter = {
-        1: {1:{1:2},'ages': "5-6", "grade_level": "1st"},
-        2: {'ages': "7-8", "grade_level": "2st"},
-        3: {'ages': "89", "grade_level": "13st"},
-}
-
-ari = counter[1][1][1]
-print(ari)
-
-
-
 
 
 
@@ -244,9 +223,16 @@ print(ari)
 
 
 # print(f'hello this is {new} you know right')
+list_stuff = ['name','fav color', 'food']
+
+user_input2 = [input('what is your name'), input('what is yoru fav color'), input('what is your fav food')]
+
+print(user_input2)
 
 
-contents = contents.split()
+new2 = dict(zip(list_stuff,user_input2))
+print(new2)
 
-"jalesa, austen"
-"jalesa",",","austen"
+
+test_card = [int(input("enter a number"))]
+[1]
