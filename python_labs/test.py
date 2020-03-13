@@ -187,52 +187,13 @@ print_stuff(data)
 #     counter += 1
 
 
-# hello = "hello this is ."
+hello = "hello this is ."
 
-# hello2 = hello.replace(".","")
-# hello3 = hello.replace(' ', '')
-# print(hello3)
-
-
-# need to find all the words in a paragraph
-# need to get rid of puct 
-
-# need to fined all the sentences in a paragraph
-# need to find all the instances of end of sentance . , ? !
-# .count(".")
-
-# need to find the characters in a paragraph
-# need to get rid of puct 
+hello2 = hello.replace(".","")
+hello3 = hello.replace(' ', '')
+print(hello2)
 
 
-# hello = "hello this. is the. sentence."
+search = []
 
-# new = hello.count('.')
-# print(new)
-
-
-
-
-
-
-
-
-
-# ages = (counter[2]['ages'])
-# new = (counter[1][1]['ageee'])
-
-
-# print(f'hello this is {new} you know right')
-list_stuff = ['name','fav color', 'food']
-
-user_input2 = [input('what is your name'), input('what is yoru fav color'), input('what is your fav food')]
-
-print(user_input2)
-
-
-new2 = dict(zip(list_stuff,user_input2))
-print(new2)
-
-
-test_card = [int(input("enter a number"))]
-[1]
+forcast = soup.find(id='')

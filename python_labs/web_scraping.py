@@ -37,3 +37,5 @@ df.to_csv('10_climing_destinations.csv')
 
 # df = pd.DataFrame(getting_raw)
 # df.columns = ['rank', 'name', 'place']
+
+
