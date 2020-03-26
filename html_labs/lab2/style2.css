@@ -18,7 +18,16 @@ header,footer{
     margin: 5px;
     border: 10px ridge rgb(56, 95, 56);
 }
+/* .side-section{
+    position: fixed;
+} */
+.middle-section{
+    text-align: center;
+    /* padding-left: 100px; */
+    
+}
 .side-section,.middle-section{
+    
     margin: 5px;
     border: 10px ridge rgb(56, 95, 56);
 }
@@ -52,9 +61,13 @@ header,footer{
         max-width: 80%;
         padding: 5px;
     }
+    .middle-section, img{
+        height: auto;
+        width: 100%;
+    }
 }
 @media (min-width: 1024px){
     header, main, footer{
-        width: 960px;
+        width: 1000px;
     }
 }
