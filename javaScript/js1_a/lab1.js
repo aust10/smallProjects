@@ -3,7 +3,7 @@ let validInput = true;
 
 // }
 function operation() {
-
+ 
     let validInput = true;
     while (validInput) {
         let operation_type = prompt("What operation would you like to preform? +, -, *, or /  ?  ");

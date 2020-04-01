@@ -14,6 +14,7 @@
 // creats a array of random numbers between 0-99
 var ticket = [];
 while(ticket.length < 6){
+ 
     var r = Math.floor(Math.random() *100) +1;
     if(ticket.indexOf(r) === -1) ticket.push(r);
 }
