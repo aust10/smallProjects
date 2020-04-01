@@ -17,7 +17,7 @@
         <input type="submit" value="Add to Grocery List"/>
     </form>
 </div>
-<img id="cart" value="Lets Go Shopping" src="{% static 'grocery_app/images/cart.jpg' %}">
+<img id="cart" value="Lets Go Shopping" src="{% static '/images/cart.jpg' %}">
 <div class="completed">
     <h1>Purchased Items:</h1>
     {% for stuff in finished_grocery_list %}
