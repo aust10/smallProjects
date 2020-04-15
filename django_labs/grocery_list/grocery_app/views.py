@@ -38,3 +38,5 @@ def delete(request):
         items.delete()
 
     return HttpResponseRedirect(reverse('grocery_app:index'))
+
+
