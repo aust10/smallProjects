@@ -215,3 +215,6 @@ operation = input("input a oprand + - * /")
 operation.split(' ')
 operation[0]
 operation[1]
+
+
+

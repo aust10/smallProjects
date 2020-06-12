@@ -39,3 +39,36 @@ if (last_num == new2):
 else:
     print ('Your card is invalid')
 
+
+'''
+RE-WRITE OF THE CREDIT CARD VALIDATOR USING LIST COMPREHENSIONS 
+
+card_number = list(map(int,input('what is your card number')))
+
+print(card_number)
+
+last_number = card_number.pop()
+
+print(last_number)
+
+card_number.reverse()
+
+print(card_number)
+doubled = [card_number[x]*2 if x %2 == 0 else card_number[x] for x in range(0, len(card_number))]
+print(doubled, 'this is doubled ')
+
+doubled = [x-9 if x > 9 else x for x in doubled]
+print(doubled, 'this is subtract 9 if over 9')
+
+card_number = sum(doubled)
+print(card_number)
+
+card_number = list(str(card_number)).pop()
+print(card_number)
+
+if last_number == int(card_number):
+    print('Valid')
+else:
+    print('False')
+
+'''
