@@ -47,6 +47,6 @@ class Preditor extends Animal {
                     animals.splice(i, 1)
                 }
             }
-        }.bind(this))
+        }.bind(this.x))
     }
 }
