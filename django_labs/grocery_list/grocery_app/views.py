@@ -19,10 +19,6 @@ def purchase(request, grocery_id):
     grocery.completed_date = timezone.now()
     grocery.save()
 
-# #this if statement is making it so that if the top button gets clicked then go ahead and delete it from the list 
-#     if grocery.is_completed == True:
-#         grocery.delete()
-
     return HttpResponseRedirect(reverse('grocery_app:index'))
 
 #adding a value to the data base, set the request.POST to a value and have the []= the name in your html.form
@@ -39,4 +35,12 @@ def delete(request):
 
     return HttpResponseRedirect(reverse('grocery_app:index'))
 
+def check(request):
+    catch_them = request.POST.getlist('check[]')
+    for item in catch_them:
+        grocery = get_object_or_404(GroceryItem, pk=item)
+        grocery.is_completed = True
+        grocery.completed_date = timezone.now()
+        grocery.save()
+    return HttpResponseRedirect(reverse('grocery_app:index'))
 
